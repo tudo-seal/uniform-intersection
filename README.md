@@ -14,3 +14,11 @@ Theorem nitlc_type_inference M Gamma0 t : stlc Gamma0 M t ->
     Forall2 (fun s u => u <> [] /\ Forall (ssim s) u) Gamma0 Gamma /\
     ssim t A.
 ```
+
+Verification instructions using Coq 8.19
+```
+git clone git@github.com:tudo-seal/uniform-intersection.git
+cd uniform-intersection
+make
+```
+resulting in `nitlc_type_inference` being `Closed under the global context`.
